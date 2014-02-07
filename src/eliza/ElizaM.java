@@ -10,15 +10,19 @@ public class ElizaM
 			Scanner kbd = new Scanner(System.in);
 			RuleEval re = new RuleEval();
 			System.out.println("Hello, I am Manya's concscience." +
-					"\nPlease say GOODBYE whenever you want to stop");
+					"\nPlease say BYE whenever you want to stop");
 			String answer="";
 			String response="";
 			do{
 				answer = kbd.nextLine().toLowerCase();
-				response = re.processAnswer(answer);
-				if(response!=null)
-					System.out.println(response);
-			} while (!answer.equals("Bye"));
+				if (!answer.equalsIgnoreCase("Bye"))
+				{
+					response = re.processAnswer(answer);
+					if(response!=null)
+						System.out.println(response);
+				}
+			} while (!answer.equalsIgnoreCase("Bye"));
+			
 	}
 }
 			
