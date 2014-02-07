@@ -29,7 +29,8 @@ public class RuleEval
 			response = checkIngVerbTo(message);
 		if (response==null)
 			response = checkEmotions(message);
-		
+		if (response==null)
+			response = randomAnswer();
 		
 		return response;	
 	}
@@ -89,6 +90,13 @@ public class RuleEval
 			return "What made you " + regexMatcher.group(1) + 
 					str2Check.substring(regexMatcher.end(), str2Check.length());
 		else return null;
+	}
+	public String randomAnswer()
+	{
+		String [] randomAnswer = {"Tell me more","I'd have to know more","What else","Please collaborate"};
+		Random rand = new Random();
+		int x = rand.nextInt(4);
+		return randomAnswer[x];
 	}
 	
 	
