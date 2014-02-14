@@ -1,0 +1,2 @@
+\\w+\\s\\w+ing .*	almatar
+\\w+ed .*	past due
