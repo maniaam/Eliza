@@ -1,2 +1,2 @@
-\\w+\\s\\w+ing .*	almatar
-\\w+ed .*	past due
+\\b(you)\\b(\\w+)?	I thought we are talking bout you not me!
+(your)\\s(\\w+)	What is it about "+ regexMatcher.group(2) + " that interests you?

@@ -47,7 +47,11 @@ public class HashMapReadFromFile
 	public String processAnswer(String ans){
 		for (Map.Entry<String, String> entry:regularEspression.entrySet()){
 			if(answerMatches(entry.getKey(), ans));	
-				return entry.getValue();
+			{
+				String str= entry.getValue();
+				return str;
+				//return entry.getValue();
+			}
 		}
 		return randomAnswer();
 	}
